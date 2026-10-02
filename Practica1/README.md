@@ -27,6 +27,7 @@ Comentarios, problemas y soluciones
 Durante la instalación de las herramientas de Haskell fue necesario configurar correctamente las rutas de los ejecutables instalados mediante GHCup y Cabal.
 Tuve el problema de que en que algunas herramientas instaladas no podía encontrarlas directamente desde la terminal debido a que sus directorios no estaban incluidos correctamente en la variable de entorno PATH.
 
+Durante la instalación de las herramientas de Haskell fue necesario configurar correctamente las rutas de los ejecutables instalados mediante GHCup y Cabal. Tuve el problema de que en que algunas herramientas instaladas no podía encontrarlas directamente desde la terminal debido a que sus directorios no estaban incluidos
 Las principales rutas utilizadas fueron:
 ~/.ghcup/bin
 ~/.cabal/
@@ -38,10 +39,12 @@ Durante la configuración del entorno tuve que verificar que Cabal estuviera cor
 La versión utilizada finalmente fue: Cabal 3.16.1.0
 
 3. Configuración de Emacs
-
 Durante la configuración de Emacs para trabajar con Haskell se presentó un problema relacionado con la personalización de las faces utilizadas por haskell-mode.
 
 Apareció un error relacionado con:
+
+Durante la configuración de Emacs para trabajar con Haskell se presentó un problema relacionado con la personalización de las faces utilizadas por haskell-mode. Apareció un error relacionado con:
+
 haskell-keyword-face
 El problema se produjo porque se intentaba modificar una face antes de que haskell-mode hubiera sido cargado y definido correctamente.
 
@@ -56,6 +59,7 @@ Otro de los problemas que tuve en la instalación  estuvo relacionado con la int
 El ejecutable se encontraba dentro del entorno administrado por GHCup:
 /home/panini3060/.ghcup/bin/
 
+
 Después de corregir y verificar la configuración del entorno, Eglot pudo iniciar correctamente Haskell Language Server.
 Posteriormente se comprobó que HLS pudiera detectar el entorno del proyecto mediante Cabal.
 
@@ -63,6 +67,13 @@ Posteriormente se comprobó que HLS pudiera detectar el entorno del proyecto med
 
 Se creó un repositorio remoto en GitHub para almacenar las prácticas de la asignatura y posteriormente se clonó en el sistema local mediante SSH.
 El repositorio local quedó ubicado en:
+
+Después de corregir y verificar la configuración del entorno, Eglot pudo iniciar correctamente Haskell Language Server. Posteriormente se comprobó que HLS pudiera detectar el entorno del proyecto mediante Cabal.
+
+5. Configuración de Git y GitHub
+
+Se creó un repositorio remoto en GitHub para almacenar las prácticas de la asignatura y posteriormente se clonó en el sistema local mediante SSH. El repositorio local quedó ubicado en:
+
 ~/repos/EstructurasDiscretas
 Durante la clonación mediante SSH se solicitó la passphrase correspondiente a la clave privada:
 ~/.ssh/id_ed25519
@@ -72,6 +83,8 @@ La conexión remota del repositorio se verificó mediante:
 git remote -v
 
 Se obtuvo como repositorio remoto:
+Y se obtuvo como repositorio remoto:
+
 git@github.com:BrunoAlvarado/EstructurasDiscretas.git
 
 El repositorio local quedó trabajando sobre la rama:
@@ -95,4 +108,12 @@ Estado final del entorno
 
 Estas fueron las versiones instaladas para el curso
 
+
 GHCup 0.2.6.2, GHC 9.10.3, Cabal 3.16.1.0, Haskell Language Server 2.14.0.0, Emacs 30.2
+
+Herramienta	                    Versión
+GHCup                       	0.2.6.2
+GHC	                            9.10.3
+Cabal	                        3.16.1.0
+Haskell Language Server	        2.14.0.0
+Emacs	                        30.2

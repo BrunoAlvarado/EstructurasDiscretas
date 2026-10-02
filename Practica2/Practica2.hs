@@ -69,15 +69,19 @@ esDescendente x y z w =
 {-
 Función: imc
 Descripción: Recibe dos parámetros, el primero kg el segundo en metros y devuelve tu imc de acuerdo a la interpretacion según la OMS; bajo, normal, sobrepeso, obesidad
-Uso: imc 53.5 1.61 = normal
+Uso: imc 53.5 1.61 = peso normal
 -}
 
 imc :: Float -> Float -> String
-imc kg metros 
-  | indice < 18.5 = "bajo"
-  | indice < 25 = "peso normal"
-  | indice < 30 = "sobrepeso"
-  | otherwise = "obesidad"
+imc kg metros = 
+  if indice < 18.5 then
+    "peso bajo"
+  else if indice < 25 then
+    "peso normal"
+  else if indice < 30 then
+    "sobrepeso"
+  else
+    "obesidad"
   where
     indice = kg / (metros * metros)
 
@@ -98,4 +102,13 @@ Uso: pendiente (3.0, 2.0) (7.0, 8.0) = 1.5
 
 pendiente :: (Float, Float) -> (Float, Float) -> Float
 pendiente (x1, y1) (x2, y2) = (y2 - y1) / (x2 - x1)
+
+{-
+Función: distanciaPuntos
+Descripción: Recibe dos parámetros que serán tuplas de dos elementos de tipo flotante respectivamente. Debe devolver un valor de tipo flotante que represente la distancia entre los puntos (tuplas).
+Uso: distanciaPuntos (2.0, 1.0) (5.0, 5.0) = 5.0
+-}
+
+distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
+distanciaPuntos (x1, y1) (x2, y2) = sqrt ((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 
