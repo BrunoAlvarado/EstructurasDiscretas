@@ -9,7 +9,7 @@ La práctica también tiene como propósito continuar utilizando el entorno de d
 
 ## Tiempo requerido
 
-El tiempo total requerido para realizar la práctica fue de aproximadamente 3.
+El tiempo total requerido para realizar la práctica fue de aproximadamente 3 horas.
 
 ## Herramientas utilizadas
 
