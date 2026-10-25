@@ -1,7 +1,9 @@
 ## Práctica 3: Mis tipos de datos y listas por compresión
 
-#Alumno: Alvarado Ibáñez Bruno
-#Asignatura: Estructuras Discretas (Laboratorio)
+# Alumno: Alvarado Ibáñez Bruno
+# Asignatura: Estructuras Discretas (Laboratorio)
+
+---
 
 ## Objetivo de la práctica
 
@@ -9,33 +11,41 @@ El objetivo de esta práctica es introducir y poner en práctica dos conceptos f
 
 La práctica también tiene como propósito distinguir entre clases de tipo (como `Num`) y tipos concretos (como `Int`), comprender la importancia de las firmas de tipo, y continuar utilizando GHCi, Git y GitHub como herramientas de desarrollo y control de versiones.
 
+---
+
 ## Ejercicio 1: Diferencia entre `Num` e `Int`
 
 Pregunta: ¿Cuál es la diferencia entre `Num` e `Int`?
 
 Respuesta:
 
-La diferencia principal es que **`Num` es una clase de tipo** (una interfaz) mientras que **`Int` es un tipo concreto**:
+La diferencia principal es que `Num` es una clase de tipo (una interfaz) mientras que `Int` es un tipo concreto:
 
 - `Num` es una **clase de tipo que agrupa a todos los tipos numéricos de Haskell. Define operaciones comunes como `(+)`, `(-)`, `(*)`, `negate`, `abs`, `signum` y `fromInteger`. Los tipos `Int`, `Integer`, `Float`, `Double` y `Rational` son instancias de `Num`. Cuando escribimos un literal como `5`, Haskell infiere que su tipo es `Num a => a`, es decir, "cualquier tipo que sea instancia de `Num`". El tipo concreto se decide después, según el contexto.
 
 - `Int` es un tipo concreto de enteros con precisión fija (normalmente 64 bits en sistemas modernos). Tiene un rango limitado y operaciones específicas. Es una de las posibles instancias de `Num`, pero no es `Num` en sí.
 
-##Ejemplo en GHCi:
+---
+
+## Ejemplo en GHCi:
 
 ![Consulta de :t (==) y :info Eq en GHCi](ghci1_ejercicio_practica3.png)
 
 ![Consulta de :t (==) y :info Eq en GHCi](ghci2_ejercicio_practica3.png)
 
-##Tiempo requerido
+---
+
+## Tiempo requerido
 
 El tiempo total requerido para realizar la práctica fue de aproximadamente 4 horas.
 Herramientas utilizadas
 
-##Ejercicio favorito
+## Ejercicio favorito
 De entre todos los ejercicios que realizé, puedo decir que el ejercicio número 2 fue el que más me llamó la atención y el que disfrute más programando, aun cuando no hubiera salido a la primera, me gusto el resultado de la solución.
 
-##Lineamientos de la práctica
+---
+
+## Lineamientos de la práctica
 
 Durante la implementación de las funciones se siguieron los lineamientos establecidos para la práctica. Las funciones se desarrollaron utilizando únicamente las operaciones y funciones básicas permitidas (+, *, /, mod, sqrt, if-then-else, y en su caso sum o length). Se evitó el uso de funciones de orden superior como map y filter, así como funciones predefinidas como even, odd y gcd.
 
@@ -43,7 +53,7 @@ Cada función implementada fue acompañada por un comentario que describe su pro
 
 De acuerdo con los lineamientos, la práctica cuenta con este archivo README.md, en el que se documentan el objetivo, el tiempo requerido, el ejercicio favorito y los comentarios relevantes sobre el desarrollo. También se realizó la carga y ejecución del archivo .hs mediante GHCi y se incluye una captura de pantalla como evidencia.
 
-##Desarrollo de la práctica
+## Desarrollo de la práctica
 
 Durante la práctica se implementaron diferentes funciones en Haskell para resolver problemas relacionados con tipos de datos propios, listas por comprensión, módulos y recursión.
 
@@ -70,22 +80,25 @@ Entre las pruebas realizadas se encuentran:
 
     *Cálculo de coprimos para números como 10, 8 y 7
 
-##Estado final de la práctica
+---
+
+## Estado final de la práctica
 
 Al finalizar la práctica se implementaron las funciones solicitadas en el archivo practica3.hs, junto con el módulo EsParBit.hs para el ejercicio 5. Las funciones cuentan con sus respectivas firmas de tipo y comentarios, y fueron probadas mediante GHCi.
 
 La práctica también cuenta con su documentación correspondiente mediante este archivo README.md y con el historial de versiones requerido mediante commits atómicos y semánticos. La evidencia de las pruebas realizadas en GHCi se incluye en este mismo documento.
 
-##Estructura de la práctica
+## Estructura de la práctica
 
 La carpeta correspondiente a la práctica contiene el archivo con las funciones implementadas, el módulo auxiliar para esParBit, este documento de documentación y las capturas de pantalla correspondientes a las pruebas realizadas mediante GHCi.
 
 ```text
 Practica3/
-├── practica3.hs
+├── Practica3.hs
 ├── EsParBit.hs
 ├── README.md
-├── ghci_ejercicio1.png
-├── ghci_practica3.png
-└── git_log_practica3.png
+├── ghci1_ejercicio_practica3.png
+└── ghci2_ejercicio_practica3.png
+
+---
 
