@@ -21,12 +21,17 @@ Respuesta:
 
 La diferencia principal es que `Num` es una clase de tipo (una interfaz) mientras que `Int` es un tipo concreto:
 
-- `Num` es una **clase de tipo que agrupa a todos los tipos numéricos de Haskell. Define operaciones comunes como `(+)`, `(-)`, `(*)`, `negate`, `abs`, `signum` y `fromInteger`. Los tipos `Int`, `Integer`, `Float`, `Double` y `Rational` son instancias de `Num`. Cuando escribimos un literal como `5`, Haskell infiere que su tipo es `Num a => a`, es decir, "cualquier tipo que sea instancia de `Num`". El tipo concreto se decide después, según el contexto.
+- `Num` es una clase de tipo que agrupa a todos los tipos numéricos de Haskell. Define operaciones comunes como `(+)`, `(-)`, `(*)`, `negate`, `abs`, `signum` y `fromInteger`. Los tipos `Int`, `Integer`, `Float`, `Double` y `Rational` son instancias de `Num`. Cuando escribimos un literal como `5`, Haskell infiere que su tipo es `Num a => a`, es decir, "cualquier tipo que sea instancia de `Num`". El tipo concreto se decide después, según el contexto.
 
 - `Int` es un tipo concreto de enteros con precisión fija (normalmente 64 bits en sistemas modernos). Tiene un rango limitado y operaciones específicas. Es una de las posibles instancias de `Num`, pero no es `Num` en sí.
 
 ---
 
+## La Chivita Recursiva
+La canción Sal de ahí, chivita, chivita es un ejemplo perfecto de recursión ya que cada estrofa añade un nuevo “llamado” (el lobo, el palo, el fuego, el agua…) que depende del anterior para resolver un problema (sacar a la chiva). Esto es idéntico a una función recursiva: se invoca a sí misma con un subproblema y llama al siguiente elemento, hasta llegar a un caso base. La estructura repetitiva de la letra donde cada nuevo verso recita todos los anteriores refleja cómo la pila de llamadas va acumulando contextos hasta que se alcanza la solución. Así, la canción ilustra visual y auditivamente la esencia de la recursión: resolver un problema llamandose así mismo en una versión más simple de sí mismo, con un punto de parada claro.
+
+
+---
 ## Ejemplo en GHCi:
 
 ![Consulta de :t (==) y :info Eq en GHCi](ghci1_ejercicio_practica3.png)
