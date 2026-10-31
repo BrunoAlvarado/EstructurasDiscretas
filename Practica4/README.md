@@ -52,7 +52,4 @@ Practica4/
 ├── mati.hs
 ├── entero.hs
 ├── README.md
-├── ghci_ejercicio_natural.png
-├── ghci_ejercicio_entero.png
-└── ghci_ejercicio_mati.png
 ```
